@@ -1,35 +1,84 @@
+# --  Opening a file --
+
 fhand = open('daffodils.txt')
 print(fhand)
 
 
-#fhand = open('bad-file.txt')
-#print(fhand)
-s = '1 2\t 3\n 4'
-print(s)
-print(repr(s))
+# -- Printing a file--
 
-
-
+# Get the file handler
 fhand = open('daffodils.txt')
-count = 0
+# Loop through each line via file handler
 for line in fhand:
-  count = count + 1
-print('Line Count:', count)
+  print(line) 
 
+
+# -- Checking special characters --
+
+# Get the file handler
 fhand = open('daffodils.txt')
+# Loop through each line via file handler
 for line in fhand:
-  #line = line.rstrip()
-  #if line.startswith('From:'):
-  print(repr(line)) # works
-  print(line, end = ' ')#works
+  print(line) 
+
+  
+# -- Printing a file w/o extra lines using print() --
+  
+  # Get the file handler
+fhand = open('daffodils.txt')
+# Loop through each line and modify the default value of 'end'
+for line in fhand:
+  print(line, end = '')
 
 
+# -- Printing a file w/o extra lines using repr() --
+
+# Get the file handler
+fhand = open('daffodils.txt')
+# Loop through each line and remove extra line character with rstrip()
+for line in fhand:
+  line = line.rstrip()
+  print(line)
 
 
+# -- Letting the user choose a file
 fname = input('Enter the file name: ')
 fhand = open(fname)
 count = 0
 for line in fhand:
-  if line.startswith('Subject:'):
-    count = count + 1
-print('There were', count, 'subject lines in', fname)
+     count = count + 1
+print('There are', count, 'lines in', fname)
+
+
+# -- Writing to a file --
+
+# Writing
+# Open file with mode 'w'
+fout = open('flower.txt', 'x')
+fout.write("This content would be added and existing would be discarded")
+fout.close()
+
+# Appending
+# Open file with mode 'a'
+fout = open('flower.txt', 'a')
+fout.write("Now the file has more content at the end!")
+fout.close()
+
+# Creating and appending
+# Open file with mode 'x'
+fout = open('new-file.txt', 'x')
+fout.write("Now the new file has some content!")
+fout.close()
+
+
+# -- Exception handling
+fname = input('Enter the file name: ')
+try:
+  fhand = open(fname)
+except:
+  print('File nout found and can not be opened:', fname)
+  exit()
+count=0
+for line in fhand:
+  count = count + 1
+print('There are', count, 'lines in', fname)
