@@ -54,7 +54,7 @@ print('There are', count, 'lines in', fname)
 
 # Writing
 # Open file with mode 'w'
-fout = open('flower.txt', 'x')
+fout = open('flower.txt', 'w')
 fout.write("This content would be added and existing would be discarded")
 fout.close()
 
@@ -76,7 +76,7 @@ fname = input('Enter the file name: ')
 try:
   fhand = open(fname)
 except:
-  print('File nout found and can not be opened:', fname)
+  print('File not found and can not be opened:', fname)
   exit()
 count=0
 for line in fhand:
