@@ -9,16 +9,17 @@ Exception handling has been discussed as well.
 
 1. Clone the repository to your local machine.
 1. Ensure that Python3 is installed.
-1. Run the code: `python3 main.py`. It is better to run each snippet individuaaly to get all the concepts.
+1. Run the code: `python3 main.py`. It is better to run each snippet individually to get all the concepts.
 
+## :traffic_light: Usage
 
-## :traffic_light: Usage 
-1. Create a file hanlde.
+1. Create a file handle.
 2. Open files.
 3. Read files.
 4. Write files and close handle.
 
-## :pray: Contributing 
+## :pray: Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
