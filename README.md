@@ -5,6 +5,8 @@ Exception handling has been discussed as well.
 
 > This code base is part of my blog on freeCodeCamp.
 
+> [Read the blog post](https://www.freecodecamp.org/news/how-to-read-files-in-python/).
+
 ## :fast_forward: Installation
 
 1. Clone the repository to your local machine.
